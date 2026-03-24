@@ -20,4 +20,5 @@ jobs:
         run: git log -1 --pretty=%B
 
       - name: Run Script
-        run: bash scripts/system_info.sh
+        run: bash week1/scripts/system_info.sh
+        - name: Run Script
