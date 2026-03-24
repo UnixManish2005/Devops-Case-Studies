@@ -1,15 +1,13 @@
 #!/bin/bash
 
-echo "System Info Log - $(date)" >> logs/system.log
-echo "--------------------------------" >> logs/system.log
+# Create logs folder if not exists
+mkdir -p week1/logs
 
-echo "Uptime:" >> logs/system.log
-uptime >> logs/system.log
+echo "System Info - $(date)" >> week1/logs/system.log
+echo "------------------------" >> week1/logs/system.log
 
-echo "Memory Usage:" >> logs/system.log
-free -h >> logs/system.log
+uptime >> week1/logs/system.log
+free -h >> week1/logs/system.log
+df -h >> week1/logs/system.log
 
-echo "Disk Usage:" >> logs/system.log
-df -h >> logs/system.log
-
-echo "--------------------------------" >> logs/system.log
+echo "------------------------" >> week1/logs/system.log
